@@ -17,7 +17,7 @@ CODE
 ### Deployment
 
 * You can directly run binary if you have KDE. Binary file is under [bin](https://github.com/furkantokac/Kmousens/blob/master/bin) folder.
-* To download binary directly, [click here](https://github.com/furkantokac/Kmousens/blob/master/bin)
+* To download binary directly, [click here](https://github.com/furkantokac/Kmousens/blob/master/bin).
 * .deb and .rpm packages are on the way ;)
 
 ### Development Tools
