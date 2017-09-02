@@ -3,12 +3,13 @@
 Kmousens lets you change the mouse sensitivity by using xinput. Especially target user of the program is KDE users that want to change mouse sensitivity easily.
 
 Screenshot :
-
 ![](https://github.com/furkantokac/Kmousens/blob/master/Kmousens/data/ss/KmousensV1.0_1.png)
 
 ### Requirements
-* qt
+* Qt 5.7 or higher
 * xinput
+
+Note : If you have up to date KDE, Kmousens will work just fine.
 
 <!--```
 CODE
@@ -16,12 +17,16 @@ CODE
 
 ### Deployment
 
-* If you have KDE, to run the program, you can directly run executable file. To download executable file click [click here](https://github.com/furkantokac/Kmousens/raw/master/bin/Kmousens).
+1. Download executable file [from here](https://github.com/furkantokac/Kmousens/raw/master/bin/Kmousens).
+2. Change file permission. Enter the command ```chmod +x Kmousens``` OR "right click" to "Kmousens", "Properties", "Permissions" tab, tick the "Is executable" box.
+3. Click "Kmousens" and run.
 
-* ATTENTION! To run the executable file, don't forget to change permission. Just enter the command ''chmod +x Kmousens'' or left click the file -> go "Permissions" tab -> Tick the "Is executable" box.
+### Coming Features
 
-* .deb and .rpm packages are on the way :)
+* Apply settings on startup
+* .deb and .rpm packages
 
 ### Development Tools
 
 * [Qt Creator](https://www.qt.io/download-open-source)
+* [KDE Neon User LTS Edition](https://neon.kde.org/download)
