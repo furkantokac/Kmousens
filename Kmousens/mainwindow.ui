@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>342</width>
-    <height>208</height>
+    <width>350</width>
+    <height>180</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,7 +15,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../../../Desktop/mouse.png</normaloff>../../../Desktop/mouse.png</iconset>
+    <normaloff>../../../Desktop/appicon.png</normaloff>../../../Desktop/appicon.png</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QFormLayout" name="formLayout">
@@ -59,13 +59,6 @@
      </widget>
     </item>
     <item row="4" column="0" colspan="2">
-     <widget class="QPushButton" name="btnApply">
-      <property name="text">
-       <string>Apply</string>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="0" colspan="2">
      <widget class="QPushButton" name="btnReset">
       <property name="text">
        <string>Reset</string>
@@ -80,7 +73,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>342</width>
+     <width>350</width>
      <height>23</height>
     </rect>
    </property>

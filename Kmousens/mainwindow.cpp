@@ -11,7 +11,6 @@ MainWindow::MainWindow(QWidget *parent) :
             ui->lblValue, SLOT(setNum(int)) );
 
     QStringList allDeviceIds = runCommand("xinput --list --id-only").split("\n");
-
     foreach( QString id, allDeviceIds)
     {
         qint8 result = runCommand("xinput --list-props "+ id).split("Constant Deceleration").size();
@@ -19,7 +18,6 @@ MainWindow::MainWindow(QWidget *parent) :
         if(result==2)
         {
             ui->comboBoxDevices->addItem( runCommand("xinput --list --name-only "+id).split("\n").first() );
-
             QString rval = runCommand("xinput list-props "+id).split("Constant Deceleration")[1];
             rval = rval.split("\t")[1];
             rval = rval.split("\n").first(); // rval will be terminal value of corresponding id
@@ -52,11 +50,6 @@ QString MainWindow::runCommand(QString cmd)
     return output;
 }
 
-void MainWindow::on_btnApply_clicked()
-{
-    applySettings();
-}
-
 void MainWindow::applySettings()
 {
     qint8 index = ui->comboBoxDevices->currentIndex();
@@ -65,6 +58,7 @@ void MainWindow::applySettings()
     deviceValues[index] = QString::number(sval);
 
     setIdSpeed(index, sval);
+    ui->statusBar->showMessage("Setting is applied.", 1500);
 }
 
 // sval = slider value
@@ -100,5 +94,12 @@ void MainWindow::on_comboBoxDevices_currentIndexChanged(int index)
 void MainWindow::on_btnReset_clicked()
 {
     ui->sliderValue->setValue(90);
+    applySettings();
+
+    ui->statusBar->showMessage("Default setting is applied.", 1500);
+}
+
+void MainWindow::on_sliderValue_sliderReleased()
+{
     applySettings();
 }

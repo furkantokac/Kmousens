@@ -21,11 +21,9 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_btnApply_clicked();
-
     void on_comboBoxDevices_currentIndexChanged(int index);
-
     void on_btnReset_clicked();
+    void on_sliderValue_sliderReleased();
 
 private:
     QString runCommand(QString cmd);
